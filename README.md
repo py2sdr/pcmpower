@@ -68,15 +68,7 @@ The default block size is 8192 samples. You can adjust this by changing the `BLO
 
 Each line of output follows this format:
 
-```
-YYYY-MM-DD HH:MM:SS.D -- XX.X dB
-```
-### Output Format
-
-Each line of output follows this format:
-```
-YYYY-MM-DD HH:MM:SS.D -- XX.X dB
-```
+    YYYY-MM-DD HH:MM:SS.D -- XX.X dB
 
 Where:
 - `YYYY` = Four-digit year
@@ -89,10 +81,9 @@ Where:
 - `XX.X` = Power level in decibels
 
 Example:
-```
-2025-12-28 14:23:45.3 -- -12.5 dB
-2025-12-28 14:23:45.4 -- -15.2 dB
-```
+
+    2025-12-28 14:23:45.3 -- -12.5 dB
+    2025-12-28 14:23:45.4 -- -15.2 dB
 
 ## License
 
