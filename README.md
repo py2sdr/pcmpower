@@ -34,6 +34,12 @@ To compile the program, use the following command:
 gcc -Wall -Wextra -std=c11 -O2 pcmpwr.c -o pcmpwr -lm
 ```
 
+## Installation
+
+```bash
+sudo cp pcmpwr /usr/local/bin
+```
+
 ## Usage
 
 ```bash
