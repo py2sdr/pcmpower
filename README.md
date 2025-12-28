@@ -46,7 +46,19 @@ Or in a pipeline:
 sdr_audio_source | pcmpwr
 ```
 
-## Output Format
+## Notes
+
+### Block Size
+
+The default block size is 8192 samples. You can adjust this by changing the `BLOCK_SIZE` definition at the top of the source file.
+
+### Input Format
+
+- **Sample format**: 16-bit signed integer (int16_t)
+- **Byte order**: Native system endianness
+- **Channels**: Mono only
+
+### Output Format
 
 Each line of output follows this format:
 
@@ -59,18 +71,6 @@ Example:
 2025-12-28 14:23:45.3 -- -33.5 dB
 2025-12-28 14:23:45.4 -- -33.2 dB
 ```
-
-## Notes
-
-### Block Size
-
-The default block size is 8192 samples. You can adjust this by changing the `BLOCK_SIZE` definition at the top of the source file.
-
-### Input Format
-
-- **Sample format**: 16-bit signed integer (int16_t)
-- **Byte order**: Native system endianness
-- **Channels**: Mono only
 
 ## License
 
