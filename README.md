@@ -65,7 +65,28 @@ Each line of output follows this format:
 ```
 YYYY-MM-DD HH:MM:SS.D -- XX.X dB
 ```
+### Output Format
 
+Each line of output follows this format:
+```
+YYYY-MM-DD HH:MM:SS.D -- XX.X dB
+```
+
+Where:
+- `YYYY` = Four-digit year
+- `MM` = Two-digit month (01-12)
+- `DD` = Two-digit day (01-31)
+- `HH` = Two-digit hour in 24-hour format (00-23)
+- `MM` = Two-digit minute (00-59)
+- `SS` = Two-digit second (00-59)
+- `D` = Single-digit decisecond (0-9, tenths of a second)
+- `XX.X` = Power level in decibels (can be negative or `-inf`)
+
+Example:
+```
+2025-12-28 14:23:45.3 -- -12.5 dB
+2025-12-28 14:23:45.4 -- -15.2 dB
+```
 Example:
 ```
 2025-12-28 14:23:45.3 -- -33.5 dB
