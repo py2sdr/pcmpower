@@ -42,6 +42,8 @@ sudo cp pcmpwr /usr/local/bin
 
 ## Usage
 
+Using a file with samples in int16_t:
+
 ```bash
 pcmpwr < audio_input.raw
 ```
