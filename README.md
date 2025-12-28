@@ -74,12 +74,12 @@ Each line of output follows this format:
 
 Where:
 - `YYYY` = Four-digit year
-- `MM` = Two-digit month (01-12)
-- `DD` = Two-digit day (01-31)
-- `HH` = Two-digit hour in 24-hour format (00-23)
-- `MM` = Two-digit minute (00-59)
-- `SS` = Two-digit second (00-59)
-- `D` = Single-digit millisecond (000-999)
+- `MM` = Month (01-12)
+- `DD` = Day (01-31)
+- `HH` = Hour in 24-hour format (00-23)
+- `MM` = Minute (00-59)
+- `SS` = Second (00-59)
+- `D` = Millisecond (000-999)
 - `XX.X` = Power level in decibels
 
 Example:
