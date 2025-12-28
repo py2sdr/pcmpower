@@ -8,13 +8,23 @@ A real-time PCM audio power monitor that calculates and displays the power level
 
 `pcmpwr` reads 16-bit signed PCM audio data from standard input, processes it in blocks, and outputs timestamped power measurements in decibels. This tool is useful for monitoring audio signal strength in real-time processing pipelines.
 
-### Features
+## Features
 
 - Reads 16-bit signed integer PCM audio data
 - Calculates power in decibels
 - Outputs measurements with sub-second precision timestamps
 - Configurable timestamp format (deciseconds or milliseconds)
 - Processes audio in efficient 8192-sample blocks
+
+## Mathematical Foundation
+For a discrete buffer of $N$ samples, the power is calculated as:
+
+$$P_{dB} = 10 \cdot \log_{10} \left( \frac{1}{N} \sum_{i=1}^{N} s_i^2 \right)$$
+
+Where:
+* $s_i$ is the individual 16-bit signed PCM sample.
+* $s_i^2$ represents the instantaneous power of that sample.
+* $\frac{1}{N} \sum s_i^2$ is the average power (Mean Square) over the window $N$.
 
 ## Compiling
 
@@ -23,12 +33,6 @@ To compile the program, use the following command:
 ```bash
 gcc -Wall -Wextra -std=c11 -O2 pcmpwr.c -o pcmpwr -lm
 ```
-
-This compiles with:
-- `-Wall -Wextra`: Enable all warnings
-- `-std=c11`: Use C11 standard
-- `-O2`: Optimization level 2
-- `-lm`: Link against the math library (required for `log10`)
 
 ## Usage
 
@@ -42,7 +46,7 @@ Or in a pipeline:
 sdr_audio_source | pcmpwr
 ```
 
-### Output Format
+## Output Format
 
 Each line of output follows this format:
 
@@ -56,23 +60,17 @@ Example:
 2025-12-28 14:23:45.4 -- -33.2 dB
 ```
 
-## Configuration
+## Notes
 
 ### Block Size
 
 The default block size is 8192 samples. You can adjust this by changing the `BLOCK_SIZE` definition at the top of the source file.
 
-## Input Format
+### Input Format
 
 - **Sample format**: 16-bit signed integer (int16_t)
 - **Byte order**: Native system endianness
 - **Channels**: Mono only
-
-## Notes
-
-- The program handles `-INFINITY` dB for signals with mean square power less than 1.0
-- Error handling is included for read failures
-- Output is flushed after each measurement for real-time monitoring
 
 ## License
 
