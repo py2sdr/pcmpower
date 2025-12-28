@@ -31,7 +31,7 @@ int main()
             sum += s * s;
         }
         double mean_sq = sum / n;
-        double pwr_db = (mean_sq >= 1.0) ? 10.0 * log10(mean_sq) : -INFINITY;  // or 0.0 if you prefer
+        double pwr_db = (mean_sq >= 1.0) ? 10.0 * log10(mean_sq) : 0.0; 
         gettimeofday(&tv, NULL);
         tm = localtime(&tv.tv_sec);
         strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", tm);
