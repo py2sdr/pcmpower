@@ -80,7 +80,7 @@ Where:
 - `MM` = Two-digit minute (00-59)
 - `SS` = Two-digit second (00-59)
 - `D` = Single-digit decisecond (0-9, tenths of a second)
-- `XX.X` = Power level in decibels (can be negative or `-inf`)
+- `XX.X` = Power level in decibels
 
 Example:
 ```
