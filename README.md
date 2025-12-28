@@ -79,7 +79,7 @@ Where:
 - `HH` = Two-digit hour in 24-hour format (00-23)
 - `MM` = Two-digit minute (00-59)
 - `SS` = Two-digit second (00-59)
-- `D` = Single-digit decisecond (0-9, tenths of a second)
+- `D` = Single-digit millisecond (000-999)
 - `XX.X` = Power level in decibels
 
 Example:
