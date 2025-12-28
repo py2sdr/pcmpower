@@ -56,15 +56,6 @@ Example:
 
 ## Configuration
 
-### Timestamp Precision
-
-The code includes two timestamp format options (choose one in the source):
-
-- **Deciseconds** (default): `%s.%01ld` - tenths of a second
-- **Milliseconds**: `%s.%03ld` - thousandths of a second
-
-To switch to milliseconds, comment out the deciseconds line and uncomment the milliseconds line in the code.
-
 ### Block Size
 
 The default block size is 8192 samples. You can adjust this by changing the `BLOCK_SIZE` definition at the top of the source file.
