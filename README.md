@@ -1,3 +1,6 @@
+<img width="739" height="484" alt="Screenshot_2025-12-28_16-13-18" src="https://github.com/user-attachments/assets/ac23f523-f0cb-4419-9cd9-048118bc2b4a" />
+
+
 # pcmpwr
 
 A real-time PCM audio power monitor that calculates and displays the power level of audio data in decibels.
