@@ -1,5 +1,4 @@
-<img width="739" height="484" alt="Screenshot_2025-12-28_16-13-18" src="https://github.com/user-attachments/assets/ac23f523-f0cb-4419-9cd9-048118bc2b4a" />
-
+<img width="739" height="484" alt="Screenshot_2025-12-28_16-18-22" src="https://github.com/user-attachments/assets/7f525172-f08a-4a9b-b2ad-1b56d1e76668" />
 
 # pcmpwr
 
